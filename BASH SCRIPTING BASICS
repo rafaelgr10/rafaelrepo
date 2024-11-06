@@ -1,0 +1,64 @@
+BASH SCRIPTING BASICS
+1. #!/bin/bash
+This line at the top tells Linux to use the Bash shell to run the script.
+
+2. echo
+echo prints text to the screen.
+Example:
+
+bash
+echo "Hello, World!"
+
+This will display Hello, World! in the terminal.
+
+3. read
+read takes input from the user and saves it in a variable.
+Example:
+
+bash
+echo "Enter your name:"
+read name
+echo "Hello, $name!"
+
+This will ask for a name, store it in name, and then greet the user.
+
+4. Variable
+A variable is a way to store data, like a piece of text or a number, that you want to use later.
+
+5. Declaring a Variable
+Declare a variable by typing its name, followed by = and the value (no spaces around =).
+
+Example:
+bash
+favorite_color="blue"
+
+6. Using a Variable
+To use (or "call") a variable, type $ before the variable’s name.
+
+Example:
+bash
+echo "My favorite color is $favorite_color"
+Example Script Using These Concepts
+Here’s a simple script that ties these all together:
+
+bash
+#!/bin/bash
+
+# Ask the user for their favorite food
+echo "What's your favorite food?"
+read food
+
+# Store it in a variable and use it
+favorite_food=$food
+echo "I see, you like $favorite_food!"
+This script:
+
+Uses #!/bin/bash to specify the shell.
+Prints a message with echo.
+Gets user input with read and stores it in food.
+Declares a variable favorite_food and prints it using $.
+
+
+
+
+
