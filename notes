@@ -1,0 +1,211 @@
+these are all my new NOTES
+System Monitoring
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. CPU Monitoring
+top: Shows running processes, CPU, and memory usage in real-time. Press q to exit.
+
+Command: top
+htop: A better, more colorful version of top. Install it with:
+
+Install: sudo apt install htop
+Run: htop
+mpstat: Shows CPU usage per core.
+
+Install: sudo apt install sysstat
+Run: mpstat
+2. Memory Monitoring
+free: Displays memory usage (RAM).
+Command: free -h
+/proc/meminfo: View detailed memory info.
+Command: cat /proc/meminfo
+3. Disk Usage Monitoring
+df: Shows disk usage of all mounted filesystems.
+
+Command: df -h
+du: Shows disk usage of specific directories or files.
+
+Example: du -sh /path/to/directory
+iotop: Monitors real-time disk I/O.
+
+Install: sudo apt install iotop
+Run: iotop
+4. Network Monitoring
+ifconfig / ip: Shows network interface details.
+
+Commands: ifconfig or ip a
+netstat: Lists open network connections and ports.
+
+Command: netstat -tuln
+nload: Real-time network traffic monitor.
+
+Install: sudo apt install nload
+Run: nload
+5. System Logs
+journalctl: View system logs.
+Command: journalctl -xe
+/var/log: Contains various system logs (e.g., syslog, auth.log).
+Example: cat /var/log/syslog
+6. Load Monitoring
+uptime: Shows how long the system has been running and load averages.
+Command: uptime
+vmstat: Reports processes, memory, and CPU activity.
+Command: vmstat 2
+7. Comprehensive Monitoring
+glances: All-in-one real-time system monitoring.
+Install: sudo apt install glances
+Run: glances
+Essential Commands Recap
+CPU: top, htop, mpstat
+Memory: free -h, cat /proc/meminfo
+Disk: df -h, du -sh, iotop
+Network: ifconfig, netstat -tuln, nload
+Logs: journalctl -xe, /var/log/syslog
+Load: uptime, vmstat
+Comprehensive: glances
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+now this is BASH
+Creating a Bash Script
+Bash scripts are text files containing commands you’d run in the terminal. To create a bash script, follow these steps:
+
+Open the terminal.
+
+Use a text editor like nano to create a script file. For example:
+
+bash
+Copy code
+nano myscript.sh
+Write your script inside this file. Start with the shebang, which tells the system that the script should be run in the Bash shell.
+
+bash
+Copy code
+#!/bin/bash
+echo "Hello, world!"
+Save the file (CTRL + O in nano), and then exit (CTRL + X).
+
+2. Making the Script Executable
+Before running your script, you need to make it executable. In the terminal:
+
+bash
+Copy code
+chmod +x myscript.sh
+This grants the script the necessary permissions to be executed.
+
+3. Running a Bash Script
+Once your script is executable, you can run it by specifying the path:
+
+bash
+Copy code
+./myscript.sh
+4. Basic Bash Scripting Concepts
+Variables
+You can define variables and use them in your script. Variable names should not have spaces.
+
+bash
+Copy code
+#!/bin/bash
+name="Rafael"
+echo "Hello, $name"
+Comments
+Use # to add comments that will not be executed.
+
+bash
+Copy code
+# This is a comment
+echo "This will run"
+Conditionals
+You can perform conditional logic using if statements.
+
+bash
+Copy code
+#!/bin/bash
+num=10
+
+if [ $num -gt 5 ]; then
+    echo "Number is greater than 5"
+else
+    echo "Number is less than or equal to 5"
+fi
+Loops
+You can use loops to repeat tasks.
+
+For loop:
+
+bash
+Copy code
+for i in {1..5}; do
+    echo "Loop number $i"
+done
+While loop:
+
+bash
+Copy code
+count=1
+while [ $count -le 5 ]; do
+    echo "Count is $count"
+    ((count++))
+done
+Functions
+Functions allow you to group code and call it by name.
+
+bash
+Copy code
+#!/bin/bash
+
+greet() {
+    echo "Hello, $1"
+}
+
+greet "Rafael"
+User Input
+You can read user input with read.
+
+bash
+Copy code
+#!/bin/bash
+echo "Enter your name: "
+read name
+echo "Hello, $name"
