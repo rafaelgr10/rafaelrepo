@@ -1,0 +1,12 @@
+!/bin/bash
+
+# Magic 8-ball answers
+answers=("Yes" "Ask Again" "What kind of question is that?" "Never" "Absolutely>
+
+echo "Welcome to the Magic 8-Ball!"
+read -p "Ask your question: " question
+
+# Select a random answer
+response=${answers[$RANDOM % ${#answers[@]}]}
+
+echo "Magic 8-Ball says: $response"
