@@ -1,0 +1,46 @@
+1. Linux Command Line and Bash Scripting
+Directories and Files:
+Navigate: cd (change), ls (list), pwd (print path).
+
+Files: touch (create), nano (edit), rm (remove), mv (move), cp (copy).
+
+Directories: mkdir (make), rmdir (remove).
+
+Find/Search: find (locate files), grep (search text).
+
+Permissions:
+View: ls -l (show permissions).
+Modify: chmod (change permissions), chown (change ownership).
+
+Bash Basics:
+Shell: Interface to run commands, Bash is a popular shell.
+Scripts: Simple programs in Bash.
+Variables: Store values, with environment variables.
+Control: Loops (for, while), conditionals (if, else).
+Redirection: >, >>, < (control where output/input goes).
+Piping: | (send output of one command to another).
+Command substitution: $(command) to insert command output.
+Aliases: Shortcuts for commands.
+
+
+
+
+2. Version Control with Git
+Basics of Git:
+
+Purpose: Tracks changes, useful for versioning.
+
+Core ideas: Repositories (projects), commits (snapshots), branches (parallel work), merges (combine changes).
+Key Git Commands:
+Start: git init (create repository).
+Stage: git add (select files to save).
+Commit: git commit -m "message" (save changes with a message).
+
+History: git log (see past commits).
+Branches: git branch (create/view branches), git checkout (switch), git merge (combine branches).
+Remote Repositories:
+
+Clone: git clone (copy repository from a remote).
+Push: git push (upload changes).
+Pull: git pull (download updates).
+Conflicts: Resolve when two changes conflict.
